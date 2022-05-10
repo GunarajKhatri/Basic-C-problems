@@ -1,6 +1,6 @@
 /*
 
-Q.Printing various patterns , run this file and test it !!
+Q.Print out various patterns , run this file and test it !!
 
 */
 
@@ -10,7 +10,7 @@ Q.Printing various patterns , run this file and test it !!
 int main()
 {
     int n;
-    printf("Enter any number between(1 to 5) to print out different pattern: ");
+    printf("Enter any number between(1 to 6) to print out different pattern: ");
     scanf("%d", &n);
     switch (n)
     {
@@ -79,8 +79,6 @@ int main()
             }
             for (int j = i; j < 9 - i; j++)
             {
-
-                // printf("* ");
                 printf("%c ", coun[4 - i]);
             }
             printf("\n");
@@ -88,7 +86,7 @@ int main()
         break;
 
     case 5:
-        //pattern5
+        // pattern5
         char string[] = "Programming";
         for (int i = 0; i < strlen(string); i++)
         {
@@ -101,6 +99,32 @@ int main()
             }
 
             printf("\n");
+        }
+        break;
+
+    case 6:
+        char str[20] = "HELLO";
+        for (int i = 0; i < strlen(str); i++)
+        {
+
+            for (int j = 0; j <= i; j++)
+            {
+                printf("%c", str[j]);
+            }
+            printf("\n");
+            if (i == strlen(str) - 1)
+            {
+                int tar = i;
+                while (tar > 0)
+                {
+                    for (int k = 0; k < tar; k++)
+                    {
+                        printf("%c", str[k]);
+                    }
+                    printf("\n");
+                    tar--;
+                }
+            }
         }
         break;
 
